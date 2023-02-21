@@ -1,11 +1,8 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Modal from "@mui/material/Modal";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "./LoginForm";
-
-const theme = createTheme();
 
 export default function LoginModal({ login }) {
   const navigate = useNavigate();

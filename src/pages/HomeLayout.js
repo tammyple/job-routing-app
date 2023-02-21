@@ -1,4 +1,4 @@
-import { Navigate, Outlet, useOutlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import SearchAppBar from "../components/SearchAppBar";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";

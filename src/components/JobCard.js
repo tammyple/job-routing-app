@@ -1,19 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
-import AuthContext from "../auth/AuthContext";
-import { useNavigate, useLocation, Link } from "react-router-dom";
-import { styled } from "@mui/material/styles";
+import { useLocation, Link } from "react-router-dom";
 import { Chip } from "@mui/material";
 import { deepOrange } from "@mui/material/colors";
 
 function JobCard({ job }) {
-  const auth = useContext(AuthContext);
-  const navigate = useNavigate();
   let location = useLocation();
   const jobSkills = job.skills;
 
