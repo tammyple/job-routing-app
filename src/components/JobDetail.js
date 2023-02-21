@@ -33,7 +33,7 @@ export default function JobDetail() {
       setJob(data);
     };
     fetchData();
-  }, []);
+  });
 
   const handleClose = () => {
     navigate(-1);
