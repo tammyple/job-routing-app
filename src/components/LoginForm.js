@@ -16,16 +16,6 @@ import Grid from "@mui/material/Grid";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Avatar from "@mui/material/Avatar";
 
-const style = {
-  bgcolor: "background.paper",
-  display: "flex",
-  flexDirection: "column",
-  width: "400px",
-  border: "1px solid",
-  padding: "10px",
-  borderRadius: "5px",
-};
-
 const formStyle = {
   marginTop: 8,
   marginRight: 0,
