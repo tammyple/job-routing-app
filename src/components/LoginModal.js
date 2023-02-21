@@ -29,10 +29,14 @@ export default function LoginModal({ login }) {
             marginTop: 8,
             marginRight: 0,
             marginLeft: 0,
-            padding: 4,
+            padding: 6,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 400,
             background: `linear-gradient(rgb(50, 50, 50) 0%, rgb(63, 63, 63) 40%, rgb(28, 28, 28) 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%)`,
           }}
         >

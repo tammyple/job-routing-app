@@ -2,6 +2,7 @@ import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
 import Stack from "@mui/material/Stack";
+import LoginModal from "../components/LoginModal";
 
 const LoginPage = () => {
   let navigate = useNavigate();

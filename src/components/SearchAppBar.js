@@ -79,13 +79,14 @@ export default function SearchAppBar() {
               navigate("/");
             }}
             variant="h6"
+            edge="start"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}
           >
             Job Routing
           </Typography>
-          <Search>
+          <Search sx={{ flexGrow: 1, ml: 1, maxWidth: "300px", width: "100%" }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -94,7 +95,7 @@ export default function SearchAppBar() {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
-          <Box sx={{ flexGrow: 1 }} />
+          <Box edge="end" sx={{ flexGrow: 1 }} />
           {auth?.user ? (
             <>
               <AccountCircleIcon />
@@ -120,35 +121,44 @@ export default function SearchAppBar() {
             </>
           ) : (
             <>
-              <Button
-                onClick={handleClickLogin}
-                variant="contained"
-                type="submit"
-                startIcon={<LoginIcon sx={{ display: "inline" }} />}
-                sx={{
-                  ml: 2,
-                  display: {
-                    xs: "none",
-                    sm: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  },
-                }}
+              <Box
+                sx={{ mr: 1, flexGrow: 0, display: { xs: "none", md: "flex" } }}
               >
-                Login
-              </Button>
+                <Button
+                  onClick={handleClickLogin}
+                  variant="contained"
+                  type="submit"
+                  startIcon={<LoginIcon sx={{ display: "inline" }} />}
+                  sx={{
+                    ml: 2,
+                    display: {
+                      xs: "none",
+                      sm: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    },
+                  }}
+                >
+                  Sign In
+                </Button>
+              </Box>
             </>
           )}
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ ml: 2, display: { xs: "block", sm: "none" } }}
+          <Box
+            edge="end"
+            sx={{ m: 0, flexGrow: 0, display: { xs: "flex", md: "none" } }}
           >
-            <MoreVertIcon />
-          </IconButton>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              color="inherit"
+            >
+              <MoreVertIcon />
+            </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
