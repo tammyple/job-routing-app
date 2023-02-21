@@ -7,13 +7,14 @@ import Modal from "@mui/material/Modal";
 import { Chip } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import { deepOrange } from "@mui/material/colors";
+import Stack from "@mui/material/Stack";
 
 const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 500,
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -48,12 +49,12 @@ export default function JobDetail() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
+          <Typography id="modal-modal-title" variant="h4" component="h2">
             {job?.title}
           </Typography>
           <Divider sx={{ mb: 1 }} />
           <Typography
-            variant="body2"
+            variant="body"
             color="text.secondary"
             sx={{
               mt: 1,
@@ -64,7 +65,7 @@ export default function JobDetail() {
           >
             {job?.description}
           </Typography>
-
+          <Stack spacing={3} />
           {job?.skills.slice(0, 4).map((skill) => (
             <Chip
               key={`${job.id}-${skill}`}

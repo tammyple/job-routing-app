@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "./LoginForm";
+import Container from "@mui/material/Container";
 
 export default function LoginModal({ login }) {
   const navigate = useNavigate();
@@ -17,13 +18,7 @@ export default function LoginModal({ login }) {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <main
-        sx={{
-          marginLeft: "auto",
-          marginRight: "auto",
-          display: "block",
-        }}
-      >
+      <Container component="main" maxWidth="sm">
         <Box
           sx={{
             marginTop: 8,
@@ -33,16 +28,12 @@ export default function LoginModal({ login }) {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: 400,
             background: `linear-gradient(rgb(50, 50, 50) 0%, rgb(63, 63, 63) 40%, rgb(28, 28, 28) 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%)`,
           }}
         >
           <LoginForm callback={() => {}} />
         </Box>
-      </main>
+      </Container>
     </Modal>
   );
 }
