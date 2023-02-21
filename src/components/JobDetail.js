@@ -49,7 +49,7 @@ export default function JobDetail() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h4" component="h2">
+          <Typography id="modal-modal-title" variant="h6" component="h4">
             {job?.title}
           </Typography>
           <Divider sx={{ mb: 1 }} />

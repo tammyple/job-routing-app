@@ -48,7 +48,7 @@ function LoginForm({ callback }) {
       <Avatar sx={{ m: 1, bgcolor: "error.main" }}>
         <LockOutlinedIcon />
       </Avatar>
-      <Typography variant="h5" component="div">
+      <Typography variant="h6" component="div">
         Login
       </Typography>
       <TextField
